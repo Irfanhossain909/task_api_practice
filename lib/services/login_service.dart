@@ -1,14 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:task_api_leaning_for_project/model/login_model.dart';
 
 class LoginService {
-  static Future<Map<String, dynamic>> loginUser(
-    String email,
-    String password,
-  ) async {
+  static Future<LoginModel?> loginUser(String email, String password) async {
     final dio = Dio();
-    final uri = Uri.parse(
-      'https://api.learnova.info/api/v1/auth/login',
-    ); // change this to your actual endpoint
+    final uri = Uri.parse('https://api.learnova.info/api/v1/auth/login');
 
     try {
       final response = await dio.post(
@@ -16,18 +12,15 @@ class LoginService {
         data: {'email': email, 'password': password},
       );
 
-      if (response.statusCode == 200) {
-        return {
-          'success': true,
-          'accessToken': response.data['data']['accessToken'],
-          'refreshToken': response.data['data']['refreshToken'],
-          'message': response.data['message'],
-        };
+      if (response.statusCode == 200 && response.data['data'] != null) {
+        return LoginModel.fromJson(response.data);
       } else {
-        return {'message': response.data['message'] ?? 'Login failed'};
+        // You can even create an error model or handle it differently
+        return null;
       }
     } catch (e) {
-      return {'success': false, 'message': 'Error: $e'};
+      print('Login error: $e');
+      return null;
     }
   }
 }

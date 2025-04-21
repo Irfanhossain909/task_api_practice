@@ -2,28 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_api_leaning_for_project/screen/login/controller/login_controller.dart';
 
-// void login(email, password) async {
-//   final dio = Dio();
-//   try {
-//     final response = await dio.post(
-//       'https://api.learnova.info/api/v1/auth/login',
-//       data: {'email': email, 'password': password},
-//     );
-
-//     response.data.toString();
-//     final accessToken = response.data['data']['accessToken'];
-//     print('Access Token: $accessToken');
-
-//     if (response.statusCode == 200) {
-//       print('Acount Lodin');
-//     } else {
-//       print('feiled');
-//     }
-//   } catch (e) {
-//     print(e.toString());
-//   }
-// }
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
