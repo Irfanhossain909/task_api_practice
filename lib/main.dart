@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:task_api_leaning_for_project/screen/controller/post_controller.dart';
-import 'package:task_api_leaning_for_project/screen/home_screen.dart';
+import 'package:task_api_leaning_for_project/screen/home/controller/post_controller.dart';
+import 'package:task_api_leaning_for_project/screen/login/login_screen.dart';
 
 void main() {
   Get.lazyPut<PostController>(() => PostController());
@@ -19,12 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      home: LoginPage(),
     );
   }
 }
-
-

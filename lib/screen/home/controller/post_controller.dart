@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:task_api_leaning_for_project/model/post_model.dart';
 
-import '../../services/api_service.dart';
+import '../../../services/api_service.dart';
 
 class PostController extends GetxController {
   var postList = <Post>[].obs;
@@ -17,6 +17,6 @@ class PostController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    getPosts();
+    // getPosts();
   }
 }
