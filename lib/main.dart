@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_api_leaning_for_project/screen/home/controller/post_controller.dart';
-import 'package:task_api_leaning_for_project/screen/login/login_screen.dart';
+import 'package:task_api_leaning_for_project/screen/notification/notification_scren.dart';
 
 void main() {
   Get.lazyPut<PostController>(() => PostController());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       // home: HomeScreen(),
-      home: LoginPage(),
+      home: NotificationScreen(),
     );
   }
 }
