@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_api_leaning_for_project/widgets/app_slider/app_slider.dart';
+import 'package:task_api_leaning_for_project/widgets/expanded_item/expandedn_item.dart';
 
 class SliderScreen extends StatelessWidget {
   const SliderScreen({super.key});
@@ -20,6 +21,7 @@ class SliderScreen extends StatelessWidget {
               ],
             ),
           ),
+          ExpandableRadioContainer()
         ],
       ),
     );

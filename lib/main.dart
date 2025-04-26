@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_api_leaning_for_project/screen/home/controller/post_controller.dart';
-import 'package:task_api_leaning_for_project/screen/notification/notification_scren.dart';
 import 'package:task_api_leaning_for_project/screen/slider_screen/slider_screen.dart';
 
 void main() {
